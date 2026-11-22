@@ -1,0 +1,162 @@
+{
+ "crimson": [
+  [
+   "crimson_01.jpg",
+   "Courtyard arena \u2013 Temple"
+  ],
+  [
+   "crimson_02.jpg",
+   "Courtyard arena \u2013 Bamboo"
+  ],
+  [
+   "crimson_03.jpg",
+   "Courtyard arena \u2013 Snow"
+  ],
+  [
+   "crimson_04.jpg",
+   "Courtyard arena \u2013 Volcano"
+  ],
+  [
+   "crimson_05.jpg",
+   "Courtyard arena \u2013 Imperial"
+  ],
+  [
+   "crimson_06.jpg",
+   "Courtyard arena \u2013 Zen"
+  ],
+  [
+   "crimson_07.jpg",
+   "Courtyard arena \u2013 Forest"
+  ],
+  [
+   "crimson_08.jpg",
+   "Courtyard arena \u2013 Jade"
+  ],
+  [
+   "crimson_09.jpg",
+   "Sumo arena \u2013 Dohyo"
+  ],
+  [
+   "crimson_10.jpg",
+   "Sumo arena \u2013 Garden"
+  ],
+  [
+   "crimson_11.jpg",
+   "Sumo arena \u2013 Lotus"
+  ],
+  [
+   "crimson_12.jpg",
+   "Sumo arena \u2013 Moon"
+  ],
+  [
+   "crimson_13.jpg",
+   "Bridge arena \u2013 Maple"
+  ],
+  [
+   "crimson_14.jpg",
+   "Bridge arena \u2013 Imperial"
+  ],
+  [
+   "crimson_15.jpg",
+   "Bridge arena \u2013 Mist"
+  ],
+  [
+   "crimson_16.jpg",
+   "Bridge arena \u2013 Night"
+  ],
+  [
+   "crimson_17.jpg",
+   "Open arena \u2013 Valley"
+  ],
+  [
+   "crimson_18.jpg",
+   "Open arena \u2013 Plateau"
+  ],
+  [
+   "crimson_19.jpg",
+   "Open arena \u2013 Canyon"
+  ],
+  [
+   "crimson_20.jpg",
+   "Open arena \u2013 Glacier"
+  ]
+ ],
+ "sunset": [
+  [
+   "sunset_01.jpg",
+   "SkyWars map \u2013 Sky"
+  ],
+  [
+   "sunset_02.jpg",
+   "SkyWars map \u2013 Volcano"
+  ],
+  [
+   "sunset_03.jpg",
+   "SkyWars map \u2013 Jungle"
+  ],
+  [
+   "sunset_04.jpg",
+   "SkyWars map \u2013 Nether"
+  ],
+  [
+   "sunset_05.jpg",
+   "SkyWars map \u2013 Ice"
+  ],
+  [
+   "sunset_06.jpg",
+   "SkyWars map \u2013 Desert"
+  ],
+  [
+   "sunset_07.jpg",
+   "SkyWars map \u2013 Blossom"
+  ],
+  [
+   "sunset_08.jpg",
+   "SkyWars map \u2013 Ocean"
+  ],
+  [
+   "sunset_09.jpg",
+   "SkyWars map \u2013 Mushroom"
+  ],
+  [
+   "sunset_10.jpg",
+   "SkyWars map \u2013 End"
+  ]
+ ],
+ "violet": [
+  [
+   "violet_01.jpg",
+   "Dropper map \u2013 Garden"
+  ],
+  [
+   "violet_02.jpg",
+   "Dropper map \u2013 Desert"
+  ],
+  [
+   "violet_03.jpg",
+   "Dropper map \u2013 Factory"
+  ],
+  [
+   "violet_04.jpg",
+   "Dropper map \u2013 Nether"
+  ],
+  [
+   "violet_05.jpg",
+   "Dropper map \u2013 Ice"
+  ]
+ ],
+ "jade": [
+  [
+   "jade_01.jpg",
+   "BedWars arena \u2013 1v1"
+  ],
+  [
+   "jade_02.jpg",
+   "BedWars arena \u2013 2v2"
+  ],
+  [
+   "jade_03.jpg",
+   "BedWars arena \u2013 3v3"
+  ]
+ ]
+}
