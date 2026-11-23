@@ -4,6 +4,8 @@ import json, shutil, os, html
 
 # Link di pagamento: quando ci sono i Checkout Link di Polar, incollarli qui.
 # Finche' un link non e' di Polar, il pulsante apre il checkout Gumroad.
+# Polar (da attivare quando il prodotto ha lo zip come benefit "File downloads"):
+#   jade: https://buy.polar.sh/polar_cl_FvXt7g4Al5p6b8tSTH9dHgSQ0sj1Tq2NUmHFe4F4FDF
 CHECKOUT = {
     "jade":    "https://newhorizonmc.gumroad.com/l/jade-dynasty-bedwars",
     "crimson": "https://newhorizonmc.gumroad.com/l/crimson-maple-duels",
