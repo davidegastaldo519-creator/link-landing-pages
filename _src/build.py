@@ -6,7 +6,7 @@ import json, shutil, os, html
 # Finche' un link non e' di Polar, il pulsante apre il checkout Gumroad.
 # Polar: mettere USE_POLAR = True SOLO quando ogni prodotto Polar ha lo zip come benefit "File downloads"
 # prodotti Polar che hanno gia' lo zip collegato (aggiungere "jade" quando c'e' il suo zip)
-POLAR_READY = set()  # Polar in test mode: riattivare {"crimson","sunset","violet"} quando l'account e' verificato
+POLAR_READY = {"crimson", "sunset", "violet"}  # aggiungere "jade" quando ha lo zip (e riattivarlo su Polar)
 POLAR = {
     "jade":    "https://buy.polar.sh/polar_cl_FvXt7g4Al5p6b8tSTH9dHgSQ0sj1Tq2NUmHFe4F4FDF",
     "crimson": "https://buy.polar.sh/polar_cl_9LOWhYn5CB52fQThzIYyKt6z1voi9BrL3KXEl4eAEkA",
