@@ -3,32 +3,58 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.className='js'</script>
 <title>NewHorizon Builds – Ready-to-paste Minecraft minigame maps</title>
 <meta name="description" content="Minecraft BedWars, Duels, SkyWars and Dropper map packs: .schem files for WorldEdit/FAWE with every spawn and chest coordinate. Made in Italy by a live server team. Instant download.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NewHorizon Builds">
 <meta property="og:title" content="NewHorizon Builds – Minecraft minigame map packs">
 <meta property="og:description" content="BedWars, Duels, SkyWars and Dropper packs, ready to paste. Instant download.">
 <meta property="og:image" content="{{SITE}}/img/jade_00.jpg">
+<meta property="og:image:width" content="1600">
+<meta property="og:image:height" content="900">
+<meta property="og:image:alt" content="Jade Dynasty BedWars lobby, rendered from the real schematic">
 <meta property="og:url" content="{{SITE}}/">
+<meta property="og:locale" content="en_GB">
+<meta property="og:locale:alternate" content="it_IT">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NewHorizon Builds – Minecraft minigame map packs">
+<meta name="twitter:description" content="BedWars, Duels, SkyWars and Dropper packs, ready to paste. Instant download.">
+<meta name="twitter:image" content="{{SITE}}/img/jade_00.jpg">
 <meta name="theme-color" content="#120d10">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="canonical" href="{{SITE}}/">
+<link rel="preload" as="image" href="img/sunset_00.jpg" fetchpriority="high">
+{{JSONLD}}
 <style>
 :root{--bg:#120d10;--bg2:#1b1418;--card:#211920;--line:#3a2b33;--tx:#f4ece6;--mut:#b9a9a6;--g1:#ffcf3f;--g2:#ff3d24}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif}
 a{color:var(--g1)}
-html[lang=en] [data-it],html[lang=it] [data-en]{display:none!important}
 .wrap{max-width:1180px;margin:0 auto;padding:0 20px}
 header{position:sticky;top:0;z-index:20;background:rgba(18,13,16,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:20px;height:64px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);font-weight:900;letter-spacing:.06em}
 .logo b{background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
-.logo svg{width:34px;height:34px}
+.logo img{width:42px;height:42px;object-fit:contain;filter:drop-shadow(0 2px 6px rgba(255,61,36,.35))}
 nav{margin-left:auto;display:flex;gap:18px;align-items:center}
 nav a{color:var(--mut);text-decoration:none;font-size:15px}
 nav a:hover{color:var(--tx)}
-.lang{border:1px solid var(--line);background:none;color:var(--tx);border-radius:8px;padding:5px 10px;cursor:pointer;font:inherit;font-size:14px}
+.langpick{position:relative}
+.lang{display:flex;align-items:center;gap:7px;border:1px solid var(--line);background:none;color:var(--tx);border-radius:8px;padding:6px 10px;cursor:pointer;font:inherit;font-size:14px;line-height:1}
+.lang:hover{border-color:var(--g1)}
+.lang:focus-visible,.langmenu li:focus-visible{outline:2px solid var(--g1);outline-offset:2px}
+.fl{font-size:16px;line-height:1}
+.ca{color:var(--mut);font-size:11px;transition:transform .15s}
+.lang[aria-expanded=true] .ca{transform:rotate(180deg)}
+.langmenu{display:none;position:absolute;right:0;top:calc(100% + 8px);margin:0;padding:6px;list-style:none;min-width:168px;background:var(--card);border:1px solid var(--line);border-radius:10px;box-shadow:0 12px 32px rgba(0,0,0,.5);z-index:30}
+.langmenu.on{display:block}
+.langmenu li{display:flex;align-items:center;gap:9px;padding:9px 11px;border-radius:7px;cursor:pointer;font-size:15px;white-space:nowrap}
+.langmenu li:hover{background:var(--bg2)}
+.langmenu li[aria-selected=true]{color:var(--g1);font-weight:700}
+.langmenu li[aria-selected=true]:after{content:"✓";margin-left:auto;font-weight:900}
 .hero{position:relative;padding:90px 0 70px;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,13,16,.97) 30%,rgba(18,13,16,.55)),url(img/sunset_00.jpg) center/cover;z-index:-1}
 .eyebrow{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--g1);border:1px solid rgba(255,207,63,.35);border-radius:99px;padding:4px 12px}
@@ -45,6 +71,7 @@ h2{font-size:clamp(26px,3.4vw,38px);margin:0 0 8px;font-weight:900}
 .sub{color:var(--mut);margin:0 0 36px;max-width:680px}
 .pack{display:grid;grid-template-columns:1.25fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:34px;border-top:3px solid var(--c)}
 .hero-img button{display:block;width:100%;height:100%;padding:0;border:0;background:#0b080a;cursor:zoom-in}
+picture{display:block}
 .hero-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/9}
 .info{padding:28px 30px}
 .mode{margin:0;color:var(--c);font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
@@ -78,19 +105,49 @@ footer a{color:var(--mut)}
 .lb p{color:var(--tx);margin:12px 0 0}
 .lb .x,.lb .nv{position:absolute;background:rgba(255,255,255,.08);border:0;color:#fff;font-size:26px;width:48px;height:48px;border-radius:50%;cursor:pointer}
 .lb .x{top:18px;right:18px}.lb .pv{left:18px;top:50%}.lb .nx{right:18px;top:50%}
-@media(max-width:860px){.pack{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}nav a.hide-m{display:none}.btn.ghost{margin:10px 0 0}}
+.srv{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.sbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+.sbox h3{margin:0 0 14px;font-size:19px}
+.srow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding:9px 0;border-top:1px solid var(--line)}
+.srow:first-of-type{border-top:0}
+.k{color:var(--mut);font-size:14.5px}
+.v.copy{margin-left:auto;display:inline-flex;align-items:center;gap:9px;background:var(--bg2);border:1px solid var(--line);border-radius:8px;padding:6px 11px;cursor:pointer;color:var(--tx);font:inherit}
+.v.copy code{font:600 14.5px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--g1)}
+.v.copy:hover{border-color:var(--g1)}
+.v.copy.done code{color:#2fd29a}
+.ci{color:var(--mut);font-size:13px}
+.slist{margin:0;padding-left:18px}
+.slist li{margin:5px 0;color:var(--mut)}
+.slist li::marker{color:var(--g1)}
+.note{font-size:14px;color:var(--mut);border-top:1px solid var(--line);margin:14px 0 0;padding-top:12px}
+.note.acc strong{color:var(--tx)}
+.disc{display:flex;align-items:center;gap:26px;flex-wrap:wrap;margin-top:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.disc h3{margin:0 0 6px;font-size:19px}
+.disc p{margin:0;color:var(--mut);max-width:620px}
+.disc .btn{margin-left:auto;white-space:nowrap}
+/* nascosto solo se il JS e' vivo: senza JS la pagina resta tutta visibile */
+html.js .reveal{opacity:0;transform:translateY(18px);transition:opacity .55s cubic-bezier(.22,.61,.36,1),transform .55s cubic-bezier(.22,.61,.36,1)}
+html.js .reveal.in{opacity:1;transform:none}
+.pack.reveal{transition-delay:.05s}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .reveal{opacity:1;transform:none;transition:none}
+  .ca{transition:none}
+}
+@media(max-width:860px){.srv{grid-template-columns:1fr}.disc .btn{margin-left:0}.pack{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}nav a.hide-m{display:none}.btn.ghost{margin:10px 0 0}}
 </style>
 </head>
 <body>
 <header><div class="wrap">
   <a class="logo" href="#top" aria-label="NewHorizon Builds">
-    <svg viewBox="0 0 34 34" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#ffcf3f"/><stop offset="1" stop-color="#ff3d24"/></linearGradient></defs><rect x="1" y="1" width="32" height="32" rx="7" fill="#211920" stroke="url(#lg)" stroke-width="2"/><path d="M8 25V9h3l6 9V9h3v16h-3l-6-9v9zM21 9h3v6h2V9h3v16h-3v-7h-2v7h-3z" fill="url(#lg)"/></svg>
+    <picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="" width="192" height="193" decoding="async"></picture>
     <span>NEWHORIZON <b>BUILDS</b></span></a>
   <nav>
     <a href="#packs"><span data-en>Packs</span><span data-it>Pacchetti</span></a>
     <a class="hide-m" href="#custom"><span data-en>Custom builds</span><span data-it>Su misura</span></a>
+    <a class="hide-m" href="#server"><span data-en>Our server</span><span data-it>Il server</span></a>
     <a class="hide-m" href="#faq">FAQ</a>
-    <button class="lang" id="lang" aria-label="Change language">IT</button>
+    {{LANGPICKER}}
   </nav>
 </div></header>
 
@@ -141,12 +198,45 @@ footer a{color:var(--mut)}
   <p style="margin-top:26px"><a class="btn" href="{{DISCORD}}" target="_blank" rel="noopener"><span data-en>Join the waiting list on Discord</span><span data-it>Mettiti in lista su Discord</span></a></p>
 </div></section>
 
+<section id="server" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+  <h2 data-en>Our server</h2><h2 data-it>Il nostro server</h2>
+  <p class="sub" data-en>The maps we sell are built by the team that runs NewHorizon MC. Same people, same hands, every day on a live server.</p>
+  <p class="sub" data-it>Le mappe che vendiamo le costruisce il team che gestisce NewHorizon MC. Le stesse persone, le stesse mani, ogni giorno su un server vero.</p>
+  <div class="srv reveal">
+    <div class="sbox">
+      <h3 data-en>Connect</h3><h3 data-it>Come entrare</h3>
+      <div class="srow"><span class="k" data-en>Java address</span><span class="k" data-it>Indirizzo Java</span><button class="v copy" type="button" data-copy="newhorizonsmp.it"><code>newhorizonsmp.it</code><span class="ci" aria-hidden="true">⧉</span></button></div>
+      <div class="srow"><span class="k" data-en>Bedrock (console &amp; mobile)</span><span class="k" data-it>Bedrock (console e mobile)</span><button class="v copy" type="button" data-copy="newhorizonsmp.it"><code>newhorizonsmp.it</code><span class="ci" aria-hidden="true">⧉</span></button></div>
+      <div class="srow"><span class="k" data-en>Bedrock port</span><span class="k" data-it>Porta Bedrock</span><button class="v copy" type="button" data-copy="19132"><code>19132</code><span class="ci" aria-hidden="true">⧉</span></button></div>
+      <p class="note" data-en>Bedrock players join through Geyser and Floodgate, with no extra account.</p>
+      <p class="note" data-it>I giocatori Bedrock entrano tramite Geyser e Floodgate, senza account aggiuntivi.</p>
+    </div>
+    <div class="sbox">
+      <h3 data-en>What you'll find</h3><h3 data-it>Cosa trovi</h3>
+      <ul class="slist" data-en><li>Survival SMP, hard difficulty, up to 100 players</li><li>Paper 26.3, multiple client versions via ViaVersion</li><li>Built-in proximity voice chat</li><li>Italian and English spoken, every day</li></ul>
+      <ul class="slist" data-it><li>Survival SMP, difficoltà hard, fino a 100 giocatori</li><li>Paper 26.3, più versioni del client grazie a ViaVersion</li><li>Chat vocale di prossimità integrata</li><li>Si parla italiano e inglese, tutti i giorni</li></ul>
+      <!-- ACCESSO: riga da cambiare quando la whitelist viene tolta -->
+      <p class="note acc" data-en><strong>Access is on request right now:</strong> the server runs with a whitelist, so ask on Discord and we'll add you.</p>
+      <p class="note acc" data-it><strong>Per ora l'accesso è su richiesta:</strong> il server gira con la whitelist, quindi chiedi su Discord e ti aggiungiamo.</p>
+    </div>
+  </div>
+  <div class="disc reveal">
+    <div>
+      <h3 data-en>Come and say hi on Discord</h3><h3 data-it>Vieni a salutarci su Discord</h3>
+      <p data-en>Support for the packs, access to the server, previews of what we're building and the waiting list for custom maps: it all happens there.</p>
+      <p data-it>Assistenza sui pacchetti, accesso al server, anteprime di quello che stiamo costruendo e lista d'attesa per le mappe su misura: succede tutto lì.</p>
+    </div>
+    <a class="btn" href="{{DISCORD}}" target="_blank" rel="noopener"><span data-en>Open Discord</span><span data-it>Apri Discord</span></a>
+  </div>
+</div></section>
+
 <section id="faq" style="padding-top:20px"><div class="wrap">
   <h2>FAQ</h2>
   <details><summary><span data-en>How do I receive the files?</span><span data-it>Come ricevo i file?</span></summary><p data-en>Right after payment you get a download link on screen and by email: a ZIP with every .schem file, coordinates.json and a README.</p><p data-it>Subito dopo il pagamento ricevi il link per scaricare, a schermo e via email: uno ZIP con tutti i file .schem, coordinates.json e un README.</p></details>
   <details><summary><span data-en>Which Minecraft versions are supported?</span><span data-it>Quali versioni di Minecraft sono supportate?</span></summary><p data-en>The maps are made for 1.21 and work on 1.20.3 and newer, with WorldEdit or FastAsyncWorldEdit.</p><p data-it>Le mappe sono fatte per la 1.21 e funzionano dalla 1.20.3 in su, con WorldEdit o FastAsyncWorldEdit.</p></details>
   <details><summary><span data-en>Do they work with my plugin?</span><span data-it>Funzionano con il mio plugin?</span></summary><p data-en>Yes: the maps are plain schematics, and coordinates.json gives you every spawn, bed, chest, generator and NPC spot to enter in any plugin's setup.</p><p data-it>Sì: le mappe sono schematiche normali, e coordinates.json ti dà ogni spawn, letto, cassa, generatore e posto NPC da inserire nel setup di qualsiasi plugin.</p></details>
   <details><summary><span data-en>Can I use them on my network or YouTube?</span><span data-it>Posso usarle sul mio network o su YouTube?</span></summary><p data-en>Yes. One purchase covers one server network, including videos and streams recorded on it. You can't resell or share the files. Full terms in the <a href="license.html">license</a>.</p><p data-it>Sì. Un acquisto vale per un network di server, compresi video e dirette registrati lì. Non puoi rivendere né condividere i file. Tutti i termini nella <a href="license.html">licenza</a>.</p></details>
+  <details><summary><span data-en>Can I get a refund?</span><span data-it>Posso avere un rimborso?</span></summary><p data-en>These are instant digital downloads, so at checkout you agree to get the files right away and give up the 14-day EU right of withdrawal: once the download has started the purchase is final. That said, if a pack is broken, incomplete or not what the page describes, write to us and we'll fix it or refund you. Details in <a href="legal.html">Terms</a>.</p><p data-it>Sono download digitali immediati, quindi al checkout accetti di ricevere subito i file e rinunci al diritto di recesso di 14 giorni: una volta iniziato il download l'acquisto è definitivo. Detto questo, se un pacchetto è rotto, incompleto o diverso da come è descritto qui, scrivici e lo sistemiamo o ti rimborsiamo. Dettagli nei <a href="legal.html">Termini</a>.</p></details>
   <details><summary><span data-en>Is payment safe?</span><span data-it>Il pagamento è sicuro?</span></summary><p data-en>Payments are handled by our payment partner, which also takes care of VAT and receipts. We never see or store your card details.</p><p data-it>I pagamenti sono gestiti dal nostro partner di pagamento, che si occupa anche di IVA e ricevute. Non vediamo e non salviamo mai i dati della tua carta.</p></details>
   <details><summary><span data-en>Something doesn't work. Who do I contact?</span><span data-it>Qualcosa non funziona. Chi contatto?</span></summary><p data-en>Email <a href="mailto:{{SUPPORT}}">{{SUPPORT}}</a> or write on our <a href="{{DISCORD}}" target="_blank" rel="noopener">Discord</a>. A real person from our team answers, in English or Italian.</p><p data-it>Scrivi a <a href="mailto:{{SUPPORT}}">{{SUPPORT}}</a> o sul nostro <a href="{{DISCORD}}" target="_blank" rel="noopener">Discord</a>. Ti risponde una persona vera del nostro team, in italiano o inglese.</p></details>
 </div></section>
@@ -163,23 +253,115 @@ footer a{color:var(--mut)}
 
 <script>
 (function(){
-  var h=document.documentElement,b=document.getElementById('lang'),saved=null;
+  var h=document.documentElement,LANGS={{LANGS}},CODES=LANGS.map(function(l){return l.c});
+  var btn=document.getElementById('langbtn'),menu=document.getElementById('langmenu'),
+      bf=document.getElementById('langflag'),bn=document.getElementById('langname');
+  // L'inglese e' gia' nel DOM: lo fotografiamo come dizionario di fallback.
+  var nodes=[].slice.call(document.querySelectorAll('[data-i18n]')),base={},cache={};
+  nodes.forEach(function(n){base[n.dataset.i18n]=n.innerHTML});
+  cache.en=base;
+
+  function apply(d){nodes.forEach(function(n){var k=n.dataset.i18n;
+    var v=(d&&d[k]!=null)?d[k]:base[k];        // chiave mancante -> inglese
+    if(n.innerHTML!==v)n.innerHTML=v})}
+
+  function paint(code){
+    var l=LANGS.filter(function(x){return x.c===code})[0]||LANGS[0];
+    h.lang=code;bf.textContent=l.f;bn.textContent=l.n;
+    [].forEach.call(menu.children,function(li){
+      li.setAttribute('aria-selected',li.dataset.lang===code?'true':'false')});
+    try{localStorage.setItem('nhb-lang',code)}catch(e){}
+    if(lb&&lb.classList.contains('on'))show();
+  }
+
+  function set(code){
+    if(CODES.indexOf(code)<0)code='en';
+    if(cache[code]){apply(cache[code]);paint(code);return}
+    fetch('i18n/'+code+'.json').then(function(r){return r.json()}).then(function(d){
+      cache[code]=d;apply(d);paint(code);
+    })['catch'](function(){apply(base);paint('en')});   // rete ko -> inglese, non pagina vuota
+  }
+
+  // apertura/chiusura del menu
+  function open(o){menu.classList.toggle('on',o);btn.setAttribute('aria-expanded',o?'true':'false');
+    if(o)menu.querySelector('[aria-selected=true],li').focus()}
+  btn.addEventListener('click',function(e){e.stopPropagation();open(!menu.classList.contains('on'))});
+  menu.addEventListener('click',function(e){var li=e.target.closest('li');
+    if(!li)return;set(li.dataset.lang);open(false);btn.focus()});
+  menu.addEventListener('keydown',function(e){
+    var items=[].slice.call(menu.children),j=items.indexOf(document.activeElement);
+    if(e.key==='Enter'||e.key===' '){e.preventDefault();document.activeElement.click()}
+    else if(e.key==='ArrowDown'){e.preventDefault();items[(j+1)%items.length].focus()}
+    else if(e.key==='ArrowUp'){e.preventDefault();items[(j-1+items.length)%items.length].focus()}
+    else if(e.key==='Escape'){open(false);btn.focus()}});
+  document.addEventListener('click',function(){if(menu.classList.contains('on'))open(false)});
+
+  var lb=document.getElementById('lb'),im=lb.querySelector('img'),cp=lb.querySelector('p'),list=[],i=0,last=null;
+  function show(){var d=list[i].dataset;im.src=d.full;
+    var c=(h.lang==='it'&&d.capIt)?d.capIt:(d.cap||'');cp.textContent=c;im.alt=c}
+
+  // lingua iniziale: ?lang= > scelta salvata > lingua del browser
+  var q=(location.search.match(/[?&]lang=([a-z-]+)/i)||[])[1],saved=null;
   try{saved=localStorage.getItem('nhb-lang')}catch(e){}
-  function set(l){h.lang=l;b.textContent=l==='en'?'IT':'EN';try{localStorage.setItem('nhb-lang',l)}catch(e){}}
-  set(saved||((navigator.language||'').toLowerCase().indexOf('it')===0?'it':'en'));
-  b.onclick=function(){set(h.lang==='en'?'it':'en')};
-  var lb=document.getElementById('lb'),im=lb.querySelector('img'),cp=lb.querySelector('p'),list=[],i=0;
-  function show(){im.src=list[i].dataset.full;cp.textContent=list[i].dataset.cap||''}
+  var nav=(navigator.language||'').toLowerCase().split('-')[0];
+  set((q&&CODES.indexOf(q.toLowerCase())>=0&&q.toLowerCase())||
+      (saved&&CODES.indexOf(saved)>=0&&saved)||
+      (CODES.indexOf(nav)>=0?nav:'en'));
   document.querySelectorAll('.th').forEach(function(t){t.addEventListener('click',function(){
     list=[].slice.call(t.closest('.pack').querySelectorAll('.thumbs .th'));i=Math.max(0,list.indexOf(t));
-    if(t.classList.contains('big'))i=0;show();lb.classList.add('on')})});
-  function close(){lb.classList.remove('on');im.src=''}
+    if(t.classList.contains('big'))i=0;last=t;show();lb.classList.add('on');lb.querySelector('.x').focus()})});
+  function close(){lb.classList.remove('on');im.src='';if(last)last.focus()}
   lb.querySelector('.x').onclick=close;
   lb.onclick=function(e){if(e.target===lb)close()};
   lb.querySelector('.pv').onclick=function(){i=(i-1+list.length)%list.length;show()};
   lb.querySelector('.nx').onclick=function(){i=(i+1)%list.length;show()};
   document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;
     if(e.key==='Escape')close();if(e.key==='ArrowLeft')lb.querySelector('.pv').click();if(e.key==='ArrowRight')lb.querySelector('.nx').click()});
+
+  // Comparsa morbida allo scroll.
+  // Niente IntersectionObserver: se per qualunque motivo i suoi callback non
+  // arrivano, la pagina resterebbe INVISIBILE. Qui si misura la posizione a
+  // mano e c'e' comunque una rete di sicurezza che mostra tutto.
+  var rv=[].slice.call(document.querySelectorAll('.reveal'));
+  [].forEach.call(document.querySelectorAll('.pack,.box,details'),function(n){
+    n.classList.add('reveal');rv.push(n)});
+  function showAll(){rv.forEach(function(n){n.classList.add('in')});rv=[]}
+  function tick(){
+    if(!rv.length)return;
+    var vh=window.innerHeight||document.documentElement.clientHeight;
+    rv=rv.filter(function(n){
+      var t=n.getBoundingClientRect().top;
+      if(t<vh*0.92){n.classList.add('in');return false}
+      return true});
+  }
+  // throttle con setTimeout e non con requestAnimationFrame: in un contesto
+  // dove rAF non scatta (tab in background, renderer throttlato) il flag
+  // resterebbe alzato per sempre e lo scroll smetterebbe di aggiornare.
+  var q=false;
+  function onScroll(){if(q)return;q=true;
+    setTimeout(function(){q=false;tick()},80)}
+  addEventListener('scroll',onScroll,{passive:true});
+  addEventListener('resize',onScroll,{passive:true});
+  tick();
+  addEventListener('load',tick);
+  setTimeout(tick,600);
+  setTimeout(showAll,3500);   // rete di sicurezza: mai una pagina vuota
+
+  // copia indirizzo del server
+  [].forEach.call(document.querySelectorAll('.copy'),function(b){
+    b.addEventListener('click',function(){
+      var v=b.dataset.copy;
+      function ok(){b.classList.add('done');
+        setTimeout(function(){b.classList.remove('done')},1400)}
+      function legacy(){var t=document.createElement('textarea');t.value=v;
+        t.setAttribute('readonly','');t.style.position='fixed';t.style.top='-999px';
+        document.body.appendChild(t);t.select();
+        try{document.execCommand('copy');ok()}catch(e){}
+        document.body.removeChild(t)}
+      if(navigator.clipboard&&navigator.clipboard.writeText){
+        navigator.clipboard.writeText(v).then(ok)['catch'](legacy)}  // negato -> ripiego, non silenzio
+      else legacy();
+    })});
 })();
 </script>
 {{CHECKOUT_SCRIPTS}}

@@ -1,146 +1,45 @@
 {
+ "_format": "[id, caption_en, caption_it] - se caption_it manca si usa l'inglese",
  "jade": [
-  [
-   "jade_00",
-   "Lobby"
-  ],
-  [
-   "jade_01",
-   "Lobby \u2013 close-up"
-  ],
-  [
-   "jade_02",
-   "BedWars map"
-  ],
-  [
-   "jade_03",
-   "BedWars arena \u2013 1v1"
-  ],
-  [
-   "jade_04",
-   "BedWars arena \u2013 2v2"
-  ],
-  [
-   "jade_05",
-   "BedWars arena \u2013 3v3"
-  ],
-  [
-   "jade_06",
-   "BedWars map \u2013 overview"
-  ],
-  [
-   "jade_07",
-   "Island detail"
-  ],
-  [
-   "jade_08",
-   "Island detail"
-  ]
+  ["jade_00", "Lobby", "Lobby"],
+  ["jade_01", "Lobby – close-up", "Lobby – dettaglio"],
+  ["jade_02", "BedWars map", "Mappa BedWars"],
+  ["jade_03", "BedWars arena – 1v1", "Arena BedWars – 1v1"],
+  ["jade_04", "BedWars arena – 2v2", "Arena BedWars – 2v2"],
+  ["jade_05", "BedWars arena – 3v3", "Arena BedWars – 3v3"],
+  ["jade_06", "BedWars map – overview", "Mappa BedWars – panoramica"],
+  ["jade_07", "Island detail", "Dettaglio isola"],
+  ["jade_08", "Island detail", "Dettaglio isola"]
  ],
  "crimson": [
-  [
-   "crimson_00",
-   "Lobby"
-  ],
-  [
-   "crimson_01",
-   "Lobby \u2013 top view"
-  ],
-  [
-   "crimson_02",
-   "Courtyard arena \u2013 Temple"
-  ],
-  [
-   "crimson_03",
-   "Courtyard arena \u2013 Volcano"
-  ],
-  [
-   "crimson_04",
-   "Courtyard arena \u2013 Zen"
-  ],
-  [
-   "crimson_05",
-   "Sumo arena \u2013 Dohyo"
-  ],
-  [
-   "crimson_06",
-   "Sumo arena \u2013 Lotus"
-  ],
-  [
-   "crimson_07",
-   "Bridge arena \u2013 Maple"
-  ],
-  [
-   "crimson_08",
-   "Bridge arena \u2013 Night"
-  ],
-  [
-   "crimson_09",
-   "Open arena \u2013 Canyon"
-  ]
+  ["crimson_00", "Lobby", "Lobby"],
+  ["crimson_01", "Lobby – top view", "Lobby – vista dall'alto"],
+  ["crimson_02", "Courtyard arena – Temple", "Arena cortile – Tempio"],
+  ["crimson_03", "Courtyard arena – Volcano", "Arena cortile – Vulcano"],
+  ["crimson_04", "Courtyard arena – Zen", "Arena cortile – Zen"],
+  ["crimson_05", "Sumo arena – Dohyo", "Arena sumo – Dohyo"],
+  ["crimson_06", "Sumo arena – Lotus", "Arena sumo – Loto"],
+  ["crimson_07", "Bridge arena – Maple", "Arena bridge – Acero"],
+  ["crimson_08", "Bridge arena – Night", "Arena bridge – Notte"],
+  ["crimson_09", "Open arena – Canyon", "Arena aperta – Canyon"]
  ],
  "sunset": [
-  [
-   "sunset_00",
-   "Lobby"
-  ],
-  [
-   "sunset_01",
-   "Lobby \u2013 top view"
-  ],
-  [
-   "sunset_02",
-   "SkyWars map \u2013 Sky"
-  ],
-  [
-   "sunset_03",
-   "SkyWars map \u2013 Volcano"
-  ],
-  [
-   "sunset_04",
-   "SkyWars map \u2013 Jungle"
-  ],
-  [
-   "sunset_05",
-   "SkyWars map \u2013 Ice"
-  ],
-  [
-   "sunset_06",
-   "SkyWars map \u2013 Blossom"
-  ],
-  [
-   "sunset_07",
-   "SkyWars map \u2013 Mushroom"
-  ]
+  ["sunset_00", "Lobby", "Lobby"],
+  ["sunset_01", "Lobby – top view", "Lobby – vista dall'alto"],
+  ["sunset_02", "SkyWars map – Sky", "Mappa SkyWars – Cielo"],
+  ["sunset_03", "SkyWars map – Volcano", "Mappa SkyWars – Vulcano"],
+  ["sunset_04", "SkyWars map – Jungle", "Mappa SkyWars – Giungla"],
+  ["sunset_05", "SkyWars map – Ice", "Mappa SkyWars – Ghiaccio"],
+  ["sunset_06", "SkyWars map – Blossom", "Mappa SkyWars – Fiori"],
+  ["sunset_07", "SkyWars map – Mushroom", "Mappa SkyWars – Funghi"]
  ],
  "violet": [
-  [
-   "violet_00",
-   "Lobby"
-  ],
-  [
-   "violet_01",
-   "Lobby \u2013 top view"
-  ],
-  [
-   "violet_02",
-   "Dropper map \u2013 Garden"
-  ],
-  [
-   "violet_03",
-   "Dropper map \u2013 Desert"
-  ],
-  [
-   "violet_04",
-   "Dropper map \u2013 Factory"
-  ],
-  [
-   "violet_05",
-   "Dropper map \u2013 Nether"
-  ],
-  [
-   "violet_06",
-   "Dropper map \u2013 Ice"
-  ]
+  ["violet_00", "Lobby", "Lobby"],
+  ["violet_01", "Lobby – top view", "Lobby – vista dall'alto"],
+  ["violet_02", "Dropper map – Garden", "Mappa Dropper – Giardino"],
+  ["violet_03", "Dropper map – Desert", "Mappa Dropper – Deserto"],
+  ["violet_04", "Dropper map – Factory", "Mappa Dropper – Fabbrica"],
+  ["violet_05", "Dropper map – Nether", "Mappa Dropper – Nether"],
+  ["violet_06", "Dropper map – Ice", "Mappa Dropper – Ghiaccio"]
  ]
 }
