@@ -4,14 +4,21 @@ import json, shutil, os, html
 
 # Link di pagamento: quando ci sono i Checkout Link di Polar, incollarli qui.
 # Finche' un link non e' di Polar, il pulsante apre il checkout Gumroad.
-# Polar (da attivare quando il prodotto ha lo zip come benefit "File downloads"):
-#   jade: https://buy.polar.sh/polar_cl_FvXt7g4Al5p6b8tSTH9dHgSQ0sj1Tq2NUmHFe4F4FDF
+# Polar: mettere USE_POLAR = True SOLO quando ogni prodotto Polar ha lo zip come benefit "File downloads"
+USE_POLAR = False
+POLAR = {
+    "jade":    "https://buy.polar.sh/polar_cl_FvXt7g4Al5p6b8tSTH9dHgSQ0sj1Tq2NUmHFe4F4FDF",
+    "crimson": "https://buy.polar.sh/polar_cl_9LOWhYn5CB52fQThzIYyKt6z1voi9BrL3KXEl4eAEkA",
+    "sunset":  "https://buy.polar.sh/polar_cl_vR9ppXoAY1CJZ1KBy7JNF0JUZ1mfWK7sVtyvm2qUPSP",
+    "violet":  "https://buy.polar.sh/polar_cl_uaeKjdr9pWf7zRiDGmNANG17QMguC8WvYJIJb1OQEtl",
+}
 CHECKOUT = {
     "jade":    "https://newhorizonmc.gumroad.com/l/jade-dynasty-bedwars",
     "crimson": "https://newhorizonmc.gumroad.com/l/crimson-maple-duels",
     "sunset":  "https://newhorizonmc.gumroad.com/l/sunset-lighthouse-skywars",
     "violet":  "https://newhorizonmc.gumroad.com/l/violet-drop-dropper",
 }
+if USE_POLAR: CHECKOUT = POLAR
 SUPPORT = "newhorizonmine@gmail.com"
 DISCORD = "https://discord.gg/GVEZQ69FXF"
 SITE = "https://mappe.newhorizonsmp.it"
@@ -89,7 +96,7 @@ for p in P:
     <p class="tag"><span data-en>{e(p["tag"])}</span><span data-it>{e(p["tag_it"])}</span></p>
     <ul data-en>{li_en}</ul><ul data-it>{li_it}</ul>
     <p class="meta">{p["files"]} .schem · WorldEdit / FAWE · 1.21 (1.20.3+) · coordinates.json<br><span data-en>Works with</span><span data-it>Compatibile con</span> {e(p["plugins"])}</p>
-    <div class="buyrow"><span class="price">${p["price"]}</span>{btn(p["id"], "Buy now", "Acquista")}</div>
+    <div class="buyrow"><span class="price">{("€" if USE_POLAR else "$")+p["price"]}</span>{btn(p["id"], "Buy now", "Acquista")}</div>
   </div>
   <div class="thumbs">{thumbs}</div>
 </article>''')
