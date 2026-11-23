@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NewHorizon Builds – Ready-to-paste Minecraft minigame maps</title>
+<meta name="description" content="Minecraft BedWars, Duels, SkyWars and Dropper map packs: .schem files for WorldEdit/FAWE with every spawn and chest coordinate. Made in Italy by a live server team. Instant download.">
+<meta property="og:title" content="NewHorizon Builds – Minecraft minigame map packs">
+<meta property="og:description" content="BedWars, Duels, SkyWars and Dropper packs, ready to paste. Instant download.">
+<meta property="og:image" content="{{SITE}}/img/jade_00.jpg">
+<meta property="og:url" content="{{SITE}}/">
+<meta name="theme-color" content="#120d10">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="{{SITE}}/">
+<style>
+:root{--bg:#120d10;--bg2:#1b1418;--card:#211920;--line:#3a2b33;--tx:#f4ece6;--mut:#b9a9a6;--g1:#ffcf3f;--g2:#ff3d24}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,sans-serif}
+a{color:var(--g1)}
+html[lang=en] [data-it],html[lang=it] [data-en]{display:none!important}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:0;z-index:20;background:rgba(18,13,16,.88);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--tx);font-weight:900;letter-spacing:.06em}
+.logo b{background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo svg{width:34px;height:34px}
+nav{margin-left:auto;display:flex;gap:18px;align-items:center}
+nav a{color:var(--mut);text-decoration:none;font-size:15px}
+nav a:hover{color:var(--tx)}
+.lang{border:1px solid var(--line);background:none;color:var(--tx);border-radius:8px;padding:5px 10px;cursor:pointer;font:inherit;font-size:14px}
+.hero{position:relative;padding:90px 0 70px;overflow:hidden;border-bottom:1px solid var(--line)}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(18,13,16,.97) 30%,rgba(18,13,16,.55)),url(img/sunset_00.jpg) center/cover;z-index:-1}
+.eyebrow{display:inline-block;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--g1);border:1px solid rgba(255,207,63,.35);border-radius:99px;padding:4px 12px}
+h1{font-size:clamp(34px,5.4vw,60px);line-height:1.05;margin:18px 0 16px;max-width:760px;font-weight:900;letter-spacing:-.01em}
+h1 em{font-style:normal;background:linear-gradient(90deg,var(--g1),var(--g2));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:19px;color:var(--mut);max-width:620px;margin:0 0 28px}
+.btn{display:inline-block;text-decoration:none;font-weight:800;border-radius:10px;padding:13px 22px;color:#1a0d06;background:linear-gradient(90deg,var(--g1),var(--g2));border:0;cursor:pointer;font-size:16px;box-shadow:0 6px 24px rgba(255,61,36,.25)}
+.btn:hover{filter:brightness(1.08)}
+.btn.ghost{background:none;color:var(--tx);border:1px solid var(--line);box-shadow:none;margin-left:10px}
+.trust{display:flex;flex-wrap:wrap;gap:10px 26px;margin-top:34px;color:var(--mut);font-size:15px;padding:0;list-style:none}
+.trust li:before{content:"✓ ";color:var(--g1);font-weight:900}
+section{padding:70px 0}
+h2{font-size:clamp(26px,3.4vw,38px);margin:0 0 8px;font-weight:900}
+.sub{color:var(--mut);margin:0 0 36px;max-width:680px}
+.pack{display:grid;grid-template-columns:1.25fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;margin-bottom:34px;border-top:3px solid var(--c)}
+.hero-img button{display:block;width:100%;height:100%;padding:0;border:0;background:#0b080a;cursor:zoom-in}
+.hero-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/9}
+.info{padding:28px 30px}
+.mode{margin:0;color:var(--c);font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.info h3{font-size:30px;margin:2px 0 0;line-height:1.15}
+.tag{color:var(--mut);margin:2px 0 14px}
+.info ul{padding-left:18px;margin:0 0 14px}
+.info li{margin:4px 0}
+.info li::marker{color:var(--c)}
+.meta{font-size:13.5px;color:var(--mut);border-top:1px solid var(--line);padding-top:12px}
+.buyrow{display:flex;align-items:center;gap:18px;margin-top:16px}
+.price{font-size:30px;font-weight:900}
+.thumbs{grid-column:1/-1;display:flex;gap:8px;padding:10px;overflow-x:auto;background:var(--bg2);border-top:1px solid var(--line)}
+.th{padding:0;border:2px solid transparent;border-radius:8px;overflow:hidden;background:none;cursor:zoom-in;flex:0 0 auto}
+.th:hover,.th:focus-visible{border-color:var(--c)}
+.thumbs img{width:160px;height:90px;object-fit:cover;display:block}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.box h3{margin:0 0 6px;font-size:19px}
+.box p{margin:0;color:var(--mut)}
+.tier .p{font-size:28px;font-weight:900;margin:6px 0}
+.soon{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;background:rgba(255,207,63,.12);color:var(--g1);border-radius:6px;padding:3px 8px;margin-left:8px;vertical-align:middle}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:700}
+details p{color:var(--mut);margin:10px 0 2px}
+footer{border-top:1px solid var(--line);padding:36px 0 50px;color:var(--mut);font-size:14px}
+footer .cols{display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between}
+footer a{color:var(--mut)}
+.lb{position:fixed;inset:0;background:rgba(5,3,4,.93);display:none;align-items:center;justify-content:center;flex-direction:column;z-index:50;padding:20px}
+.lb.on{display:flex}
+.lb img{max-width:100%;max-height:82vh;border-radius:10px}
+.lb p{color:var(--tx);margin:12px 0 0}
+.lb .x,.lb .nv{position:absolute;background:rgba(255,255,255,.08);border:0;color:#fff;font-size:26px;width:48px;height:48px;border-radius:50%;cursor:pointer}
+.lb .x{top:18px;right:18px}.lb .pv{left:18px;top:50%}.lb .nx{right:18px;top:50%}
+@media(max-width:860px){.pack{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}nav a.hide-m{display:none}.btn.ghost{margin:10px 0 0}}
+</style>
+</head>
+<body>
+<header><div class="wrap">
+  <a class="logo" href="#top" aria-label="NewHorizon Builds">
+    <svg viewBox="0 0 34 34" aria-hidden="true"><defs><linearGradient id="lg" x1="0" x2="1"><stop offset="0" stop-color="#ffcf3f"/><stop offset="1" stop-color="#ff3d24"/></linearGradient></defs><rect x="1" y="1" width="32" height="32" rx="7" fill="#211920" stroke="url(#lg)" stroke-width="2"/><path d="M8 25V9h3l6 9V9h3v16h-3l-6-9v9zM21 9h3v6h2V9h3v16h-3v-7h-2v7h-3z" fill="url(#lg)"/></svg>
+    <span>NEWHORIZON <b>BUILDS</b></span></a>
+  <nav>
+    <a href="#packs"><span data-en>Packs</span><span data-it>Pacchetti</span></a>
+    <a class="hide-m" href="#custom"><span data-en>Custom builds</span><span data-it>Su misura</span></a>
+    <a class="hide-m" href="#faq">FAQ</a>
+    <button class="lang" id="lang" aria-label="Change language">IT</button>
+  </nav>
+</div></header>
+
+<main id="top">
+<div class="hero"><div class="wrap">
+  <span class="eyebrow">🇮🇹 <span data-en>Made in Italy by a live server team</span><span data-it>Made in Italy da chi gestisce un server vero</span></span>
+  <h1 data-en>Minigame maps <em>ready to paste</em> on your server.</h1>
+  <h1 data-it>Mappe minigiochi <em>pronte da incollare</em> sul tuo server.</h1>
+  <p class="lead" data-en>Complete BedWars, Duels, SkyWars and Dropper packs: lobby, every map, and a coordinates file with every spawn, chest and NPC spot. Paste, configure, play.</p>
+  <p class="lead" data-it>Pacchetti completi BedWars, Duels, SkyWars e Dropper: lobby, tutte le mappe e un file con le coordinate di ogni spawn, cassa e NPC. Incolli, configuri, giochi.</p>
+  <a class="btn" href="#packs"><span data-en>See the packs</span><span data-it>Vedi i pacchetti</span></a><a class="btn ghost" href="#custom"><span data-en>Need a custom map?</span><span data-it>Ti serve una mappa su misura?</span></a>
+  <ul class="trust">
+    <li><span data-en>Instant download</span><span data-it>Download immediato</span></li>
+    <li><span data-en>Secure checkout</span><span data-it>Pagamento sicuro</span></li>
+    <li>WorldEdit / FAWE .schem</li>
+    <li><span data-en>Spawn &amp; chest coordinates included</span><span data-it>Coordinate di spawn e casse incluse</span></li>
+    <li><span data-en>Support in English &amp; Italian</span><span data-it>Assistenza in italiano e inglese</span></li>
+  </ul>
+</div></div>
+
+<section id="packs"><div class="wrap">
+  <h2 data-en>Map packs</h2><h2 data-it>Pacchetti mappe</h2>
+  <p class="sub" data-en>Every image below is rendered from the real .schem files you download. Click any picture to enlarge it.</p>
+  <p class="sub" data-it>Ogni immagine qui sotto è renderizzata dai veri file .schem che scarichi. Clicca su un'immagine per ingrandirla.</p>
+{{PACKS}}
+</div></section>
+
+<section id="how" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
+  <h2 data-en>How we build</h2><h2 data-it>Come costruiamo</h2>
+  <p class="sub" data-en>We run NewHorizon MC, a live Italian Minecraft server. Our maps come from our own procedural generators and AI-assisted tools, and every pack is checked before release.</p>
+  <p class="sub" data-it>Gestiamo NewHorizon MC, un server Minecraft italiano attivo. Le nostre mappe nascono dai nostri generatori procedurali e da strumenti con IA, e ogni pacchetto viene controllato prima dell'uscita.</p>
+  <div class="grid3">
+    <div class="box"><h3 data-en>Checked block by block</h3><h3 data-it>Controllate blocco per blocco</h3><p data-en>No floating water, no holes in floors, droppers tested with vanilla fall physics.</p><p data-it>Niente acqua sospesa, niente buchi nei pavimenti, dropper verificati con la fisica di caduta vanilla.</p></div>
+    <div class="box"><h3 data-en>Setup in minutes</h3><h3 data-it>Pronte in pochi minuti</h3><p data-en>Every schematic is centred: stand where you want it and //paste. coordinates.json does the rest.</p><p data-it>Ogni schematica è centrata: ti metti dove la vuoi e fai //paste. Al resto pensa coordinates.json.</p></div>
+    <div class="box"><h3 data-en>Honest about AI</h3><h3 data-it>Trasparenti sull'IA</h3><p data-en>We use AI tools in our pipeline and we say so. What you see in the renders is exactly what you get.</p><p data-it>Usiamo strumenti di IA nel nostro processo e lo diciamo. Quello che vedi nei render è esattamente quello che ricevi.</p></div>
+  </div>
+</div></section>
+
+<section id="custom"><div class="wrap">
+  <h2><span data-en>Custom builds</span><span data-it>Mappe su misura</span> <span class="soon"><span data-en>Coming soon</span><span data-it>In arrivo</span></span></h2>
+  <p class="sub" data-en>Tell us the theme, the game mode and the size: we build the map for your server, with the same coordinates file and a commercial license for your network.</p>
+  <p class="sub" data-it>Dicci il tema, la modalità e le dimensioni: costruiamo la mappa per il tuo server, con lo stesso file di coordinate e una licenza commerciale per il tuo network.</p>
+  <div class="grid3">
+    <div class="box tier"><h3>Arena</h3><div class="p"><span data-en>from</span><span data-it>da</span> €49</div><p data-en>One PvP or sumo arena in your theme.</p><p data-it>Un'arena PvP o sumo con il tuo tema.</p></div>
+    <div class="box tier"><h3><span data-en>Minigame map</span><span data-it>Mappa minigioco</span></h3><div class="p"><span data-en>from</span><span data-it>da</span> €99</div><p data-en>A BedWars, SkyWars or Dropper map with full setup coordinates.</p><p data-it>Una mappa BedWars, SkyWars o Dropper con tutte le coordinate di setup.</p></div>
+    <div class="box tier"><h3>Lobby / Spawn</h3><div class="p"><span data-en>from</span><span data-it>da</span> €149</div><p data-en>A themed hub with NPC, leaderboard and portal spots.</p><p data-it>Una hub a tema con posti per NPC, classifiche e portali.</p></div>
+  </div>
+  <p style="margin-top:26px"><a class="btn" href="{{DISCORD}}" target="_blank" rel="noopener"><span data-en>Join the waiting list on Discord</span><span data-it>Mettiti in lista su Discord</span></a></p>
+</div></section>
+
+<section id="faq" style="padding-top:20px"><div class="wrap">
+  <h2>FAQ</h2>
+  <details><summary><span data-en>How do I receive the files?</span><span data-it>Come ricevo i file?</span></summary><p data-en>Right after payment you get a download link on screen and by email: a ZIP with every .schem file, coordinates.json and a README.</p><p data-it>Subito dopo il pagamento ricevi il link per scaricare, a schermo e via email: uno ZIP con tutti i file .schem, coordinates.json e un README.</p></details>
+  <details><summary><span data-en>Which Minecraft versions are supported?</span><span data-it>Quali versioni di Minecraft sono supportate?</span></summary><p data-en>The maps are made for 1.21 and work on 1.20.3 and newer, with WorldEdit or FastAsyncWorldEdit.</p><p data-it>Le mappe sono fatte per la 1.21 e funzionano dalla 1.20.3 in su, con WorldEdit o FastAsyncWorldEdit.</p></details>
+  <details><summary><span data-en>Do they work with my plugin?</span><span data-it>Funzionano con il mio plugin?</span></summary><p data-en>Yes: the maps are plain schematics, and coordinates.json gives you every spawn, bed, chest, generator and NPC spot to enter in any plugin's setup.</p><p data-it>Sì: le mappe sono schematiche normali, e coordinates.json ti dà ogni spawn, letto, cassa, generatore e posto NPC da inserire nel setup di qualsiasi plugin.</p></details>
+  <details><summary><span data-en>Can I use them on my network or YouTube?</span><span data-it>Posso usarle sul mio network o su YouTube?</span></summary><p data-en>Yes. One purchase covers one server network, including videos and streams recorded on it. You can't resell or share the files. Full terms in the <a href="license.html">license</a>.</p><p data-it>Sì. Un acquisto vale per un network di server, compresi video e dirette registrati lì. Non puoi rivendere né condividere i file. Tutti i termini nella <a href="license.html">licenza</a>.</p></details>
+  <details><summary><span data-en>Is payment safe?</span><span data-it>Il pagamento è sicuro?</span></summary><p data-en>Payments are handled by our payment partner, which also takes care of VAT and receipts. We never see or store your card details.</p><p data-it>I pagamenti sono gestiti dal nostro partner di pagamento, che si occupa anche di IVA e ricevute. Non vediamo e non salviamo mai i dati della tua carta.</p></details>
+  <details><summary><span data-en>Something doesn't work. Who do I contact?</span><span data-it>Qualcosa non funziona. Chi contatto?</span></summary><p data-en>Email <a href="mailto:{{SUPPORT}}">{{SUPPORT}}</a> or write on our <a href="{{DISCORD}}" target="_blank" rel="noopener">Discord</a>. A real person from our team answers, in English or Italian.</p><p data-it>Scrivi a <a href="mailto:{{SUPPORT}}">{{SUPPORT}}</a> o sul nostro <a href="{{DISCORD}}" target="_blank" rel="noopener">Discord</a>. Ti risponde una persona vera del nostro team, in italiano o inglese.</p></details>
+</div></section>
+</main>
+
+<footer><div class="wrap cols">
+  <div><strong>NewHorizon Builds</strong><br><span data-en>by the team of</span><span data-it>dal team di</span> <a href="https://newhorizonsmp.it" target="_blank" rel="noopener">NewHorizon MC</a> 🇮🇹<br><a href="mailto:{{SUPPORT}}">{{SUPPORT}}</a> · <a href="{{DISCORD}}" target="_blank" rel="noopener">Discord</a></div>
+  <div><a href="license.html"><span data-en>License</span><span data-it>Licenza</span></a> · <a href="legal.html"><span data-en>Terms &amp; Privacy</span><span data-it>Termini e Privacy</span></a></div>
+  <div style="max-width:420px" data-en>Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.</div>
+  <div style="max-width:420px" data-it>Non è un prodotto ufficiale Minecraft. Non approvato da né associato a Mojang o Microsoft.</div>
+</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true"><button class="x" aria-label="Close">×</button><button class="nv pv" aria-label="Previous">‹</button><img alt=""><p></p><button class="nv nx" aria-label="Next">›</button></div>
+
+<script>
+(function(){
+  var h=document.documentElement,b=document.getElementById('lang'),saved=null;
+  try{saved=localStorage.getItem('nhb-lang')}catch(e){}
+  function set(l){h.lang=l;b.textContent=l==='en'?'IT':'EN';try{localStorage.setItem('nhb-lang',l)}catch(e){}}
+  set(saved||((navigator.language||'').toLowerCase().indexOf('it')===0?'it':'en'));
+  b.onclick=function(){set(h.lang==='en'?'it':'en')};
+  var lb=document.getElementById('lb'),im=lb.querySelector('img'),cp=lb.querySelector('p'),list=[],i=0;
+  function show(){im.src=list[i].dataset.full;cp.textContent=list[i].dataset.cap||''}
+  document.querySelectorAll('.th').forEach(function(t){t.addEventListener('click',function(){
+    list=[].slice.call(t.closest('.pack').querySelectorAll('.thumbs .th'));i=Math.max(0,list.indexOf(t));
+    if(t.classList.contains('big'))i=0;show();lb.classList.add('on')})});
+  function close(){lb.classList.remove('on');im.src=''}
+  lb.querySelector('.x').onclick=close;
+  lb.onclick=function(e){if(e.target===lb)close()};
+  lb.querySelector('.pv').onclick=function(){i=(i-1+list.length)%list.length;show()};
+  lb.querySelector('.nx').onclick=function(){i=(i+1)%list.length;show()};
+  document.addEventListener('keydown',function(e){if(!lb.classList.contains('on'))return;
+    if(e.key==='Escape')close();if(e.key==='ArrowLeft')lb.querySelector('.pv').click();if(e.key==='ArrowRight')lb.querySelector('.nx').click()});
+})();
+</script>
+{{CHECKOUT_SCRIPTS}}
+</body>
+</html>

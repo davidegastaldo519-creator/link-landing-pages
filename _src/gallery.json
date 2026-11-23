@@ -1,0 +1,146 @@
+{
+ "jade": [
+  [
+   "jade_00",
+   "Lobby"
+  ],
+  [
+   "jade_01",
+   "Lobby \u2013 close-up"
+  ],
+  [
+   "jade_02",
+   "BedWars map"
+  ],
+  [
+   "jade_03",
+   "BedWars arena \u2013 1v1"
+  ],
+  [
+   "jade_04",
+   "BedWars arena \u2013 2v2"
+  ],
+  [
+   "jade_05",
+   "BedWars arena \u2013 3v3"
+  ],
+  [
+   "jade_06",
+   "BedWars map \u2013 overview"
+  ],
+  [
+   "jade_07",
+   "Island detail"
+  ],
+  [
+   "jade_08",
+   "Island detail"
+  ]
+ ],
+ "crimson": [
+  [
+   "crimson_00",
+   "Lobby"
+  ],
+  [
+   "crimson_01",
+   "Lobby \u2013 top view"
+  ],
+  [
+   "crimson_02",
+   "Courtyard arena \u2013 Temple"
+  ],
+  [
+   "crimson_03",
+   "Courtyard arena \u2013 Volcano"
+  ],
+  [
+   "crimson_04",
+   "Courtyard arena \u2013 Zen"
+  ],
+  [
+   "crimson_05",
+   "Sumo arena \u2013 Dohyo"
+  ],
+  [
+   "crimson_06",
+   "Sumo arena \u2013 Lotus"
+  ],
+  [
+   "crimson_07",
+   "Bridge arena \u2013 Maple"
+  ],
+  [
+   "crimson_08",
+   "Bridge arena \u2013 Night"
+  ],
+  [
+   "crimson_09",
+   "Open arena \u2013 Canyon"
+  ]
+ ],
+ "sunset": [
+  [
+   "sunset_00",
+   "Lobby"
+  ],
+  [
+   "sunset_01",
+   "Lobby \u2013 top view"
+  ],
+  [
+   "sunset_02",
+   "SkyWars map \u2013 Sky"
+  ],
+  [
+   "sunset_03",
+   "SkyWars map \u2013 Volcano"
+  ],
+  [
+   "sunset_04",
+   "SkyWars map \u2013 Jungle"
+  ],
+  [
+   "sunset_05",
+   "SkyWars map \u2013 Ice"
+  ],
+  [
+   "sunset_06",
+   "SkyWars map \u2013 Blossom"
+  ],
+  [
+   "sunset_07",
+   "SkyWars map \u2013 Mushroom"
+  ]
+ ],
+ "violet": [
+  [
+   "violet_00",
+   "Lobby"
+  ],
+  [
+   "violet_01",
+   "Lobby \u2013 top view"
+  ],
+  [
+   "violet_02",
+   "Dropper map \u2013 Garden"
+  ],
+  [
+   "violet_03",
+   "Dropper map \u2013 Desert"
+  ],
+  [
+   "violet_04",
+   "Dropper map \u2013 Factory"
+  ],
+  [
+   "violet_05",
+   "Dropper map \u2013 Nether"
+  ],
+  [
+   "violet_06",
+   "Dropper map \u2013 Ice"
+  ]
+ ]
+}
