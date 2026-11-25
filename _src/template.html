@@ -105,6 +105,20 @@ footer a{color:var(--mut)}
 .lb p{color:var(--tx);margin:12px 0 0}
 .lb .x,.lb .nv{position:absolute;background:rgba(255,255,255,.08);border:0;color:#fff;font-size:26px;width:48px;height:48px;border-radius:50%;cursor:pointer}
 .lb .x{top:18px;right:18px}.lb .pv{left:18px;top:50%}.lb .nx{right:18px;top:50%}
+.free{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--card);border:1px solid var(--line);border-radius:18px;overflow:hidden;border-top:3px solid var(--g1)}
+.free-img button{display:block;width:100%;height:100%;padding:0;border:0;background:#0b080a;cursor:zoom-in}
+.free-img img{width:100%;height:100%;object-fit:cover;display:block;aspect-ratio:16/9}
+.free-txt{padding:30px 32px}
+.eyebrow2{margin:0;color:var(--g1);font-weight:900;letter-spacing:.14em;text-transform:uppercase;font-size:13px}
+.free-txt h2{font-size:clamp(24px,3vw,32px);margin:4px 0 12px}
+.free-txt p{color:var(--mut);margin:0 0 14px}
+.free-txt strong{color:var(--tx)}
+.freelist{margin:0 0 18px;padding-left:18px;color:var(--mut)}
+.freelist li{margin:5px 0}
+.freelist li::marker{color:var(--g1)}
+.freelist code,.free-txt code{font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;color:var(--g1);background:var(--bg2);padding:2px 6px;border-radius:5px}
+.freecta{margin:0 0 10px}
+.freenote{font-size:13.5px;color:var(--mut);margin:0}
 .srv{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .sbox{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
 .sbox h3{margin:0 0 14px;font-size:19px}
@@ -134,7 +148,7 @@ html.js .reveal.in{opacity:1;transform:none}
   .reveal{opacity:1;transform:none;transition:none}
   .ca{transition:none}
 }
-@media(max-width:860px){.srv{grid-template-columns:1fr}.disc .btn{margin-left:0}.pack{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}nav a.hide-m{display:none}.btn.ghost{margin:10px 0 0}}
+@media(max-width:860px){.srv{grid-template-columns:1fr}.free{grid-template-columns:1fr}.disc .btn{margin-left:0}.pack{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}nav a.hide-m{display:none}.btn.ghost{margin:10px 0 0}}
 </style>
 </head>
 <body>
@@ -144,6 +158,7 @@ html.js .reveal.in{opacity:1;transform:none}
     <span>NEWHORIZON <b>BUILDS</b></span></a>
   <nav>
     <a href="#packs"><span data-en>Packs</span><span data-it>Pacchetti</span></a>
+    <a href="#gratis"><span data-en>Free</span><span data-it>Gratis</span></a>
     <a class="hide-m" href="#custom"><span data-en>Custom builds</span><span data-it>Su misura</span></a>
     <a class="hide-m" href="#server"><span data-en>Our server</span><span data-it>Il server</span></a>
     <a class="hide-m" href="#faq">FAQ</a>
@@ -173,6 +188,24 @@ html.js .reveal.in{opacity:1;transform:none}
   <p class="sub" data-en>Every image below is rendered from the real .schem files you download. Click any picture to enlarge it.</p>
   <p class="sub" data-it>Ogni immagine qui sotto è renderizzata dai veri file .schem che scarichi. Clicca su un'immagine per ingrandirla.</p>
 {{PACKS}}
+</div></section>
+
+<section id="gratis"><div class="wrap">
+  <div class="free reveal">
+    <div class="free-img"><button class="th big" data-full="img/crimson_02.jpg" data-cap="Courtyard arena – Temple" data-cap-it="Arena cortile – Tempio" aria-label="Courtyard arena – Temple"><picture><source srcset="img/crimson_02.webp" type="image/webp"><img src="img/crimson_02.jpg" alt="Crimson Maple – Temple courtyard arena" loading="lazy" width="1600" height="900"></picture></button></div>
+    <div class="free-txt">
+      <p class="eyebrow2" data-en>Free sample</p><p class="eyebrow2" data-it>Prova gratuita</p>
+      <h2 data-en>Take one arena home, free</h2>
+      <h2 data-it>Portati a casa un'arena, gratis</h2>
+      <p data-en>The <strong>Temple</strong> courtyard arena from Crimson Maple: 81×52×85 blocks, flat floor, ready for every PvP kit. Same file our buyers get — no watermark, no cut-down version.</p>
+      <p data-it>L'arena cortile <strong>Temple</strong> presa da Crimson Maple: 81×52×85 blocchi, pavimento piatto, pronta per ogni kit PvP. È lo stesso file che ricevono i clienti: nessuna filigrana, nessuna versione ridotta.</p>
+      <ul class="freelist" data-en><li>The <code>.schem</code> file, ready for WorldEdit / FAWE</li><li><code>coordinates.json</code> with both spawns, build limits and void Y</li><li>A README that walks you through pasting it</li></ul>
+      <ul class="freelist" data-it><li>Il file <code>.schem</code>, pronto per WorldEdit / FAWE</li><li><code>coordinates.json</code> con i due spawn, i limiti e la Y del vuoto</li><li>Un README che ti guida passo passo nell'incollaggio</li></ul>
+      <p class="freecta"><a class="btn" href="download/crimson_maple_temple_free.zip" download><span data-en>Download free (28 KB)</span><span data-it>Scarica gratis (28 KB)</span></a></p>
+      <p class="freenote" data-en>No email, no account, no newsletter. Click and it's yours.</p>
+      <p class="freenote" data-it>Niente email, niente account, niente newsletter. Clicchi ed è tua.</p>
+    </div>
+  </div>
 </div></section>
 
 <section id="how" style="background:var(--bg2);border-block:1px solid var(--line)"><div class="wrap">
